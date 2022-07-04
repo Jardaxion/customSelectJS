@@ -11,6 +11,26 @@
     <!-- Option in original Select must match div.option in div.options -->
     
     <div class="select_body" id="frist"> <!-- In custom select must be original select and .select must have a unique id -->
+        <select class="input" name="">
+            <option value="1">Value1</option>
+            <option value="2">Value2</option>
+            <option value="3">Value3</option>
+            <option value="4">Value4</option>
+            <option value="5">Value5</option>
+        </select>
+        <div class="select"> <!-- Button for open options -->
+            <p></p> <!-- The selected value will be written here -->
+            <p>▼</p>
+        </div>
+        <div class="options"> <!-- Options -->
+            <p class="option option0">Value1</p> <!-- Number in the end need to props checks in original select(Count must start from 0) -->
+            <p class="option option1">Value2</p>
+            <p class="option option2">Value3</p>
+            <p class="option option3">Value4</p>
+            <p class="option option4">Value5</p>
+        </div>
+    </div>
+    <div class="select_body" id="second"> <!-- In custom select must be original select and .select must have a unique id -->
         <select class="input" name="" id="nameOriginalSelect">
             <option value="1">Value1</option>
             <option value="2">Value2</option>

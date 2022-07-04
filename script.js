@@ -18,7 +18,7 @@ function firstReplace(classSelect, classOption){
     let option = document.querySelector(classOption)
     select.innerHTML = option.innerHTML
 }
-
+let i = 100;
 document.querySelectorAll('.select_body').forEach(function(el){
     let selectBody = '#'+el.getAttribute('id')
     firstReplace(selectBody+' .select', selectBody+' .options .option0')
@@ -26,6 +26,8 @@ document.querySelectorAll('.select_body').forEach(function(el){
     document.querySelector(selectBody + ' .select').addEventListener('click', function(){
         OnOffselect(selectBody + ' .select', selectBody + ' .options')//Aplying on or off function
     })
+  
+    document.querySelector(selectBody + ' .options').style.zIndex = i;
 
     document.querySelectorAll(selectBody + ' .options .option').forEach(function(option){
         option.addEventListener('click', function(){
@@ -33,4 +35,5 @@ document.querySelectorAll('.select_body').forEach(function(el){
             document.querySelector(selectBody + ' select').selectedIndex = this.getAttribute('class').replace('option ', '').replace(/[^\d]/g, '') //We look at which element we have selected and select the same element in the usual select
         })
     })
+    i--;
 })
